@@ -62,9 +62,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FiturHomeController::class, 'index']);
 
 // Products
-Route::controller(ProductController::class)->group(function(){
-    Route::get('/products', 'index');
-    Route::get('/products/detail/{id}', 'detail');
+Route::prefix('/products')->group(function(){
+    Route::get('/', [ProductController::class, 'index']);
+    Route::get('/detail/{id}', [ProductController::class, 'detail']);
 });
 
 // News
@@ -80,4 +80,4 @@ Route::controller(ProgramController::class)->group(function(){
     Route::get('/program/kunjungan-industri', 'industri');
 });
 
-Route::get('/about', [FiturAboutController::class, 'index']);
+Route::get('/about', [FiturAboutController::class, 'index'])->name('about');
