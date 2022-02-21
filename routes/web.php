@@ -37,14 +37,14 @@ use Illuminate\Support\Facades\Route;
 //     echo "Ini merupakan halaman artikel dengan ID ". $id;
 // });
 
-/* Praktikum 02 */
+/* Praktikum 02 - Bagian 1 */
 // Route::get('/', [PageController::class, 'index']);
 
 // Route::get('/about', [PageController::class, 'about']);
 
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
-/* Praktikum 03 */
+/* Praktikum 02 - Bagian 2 */
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
