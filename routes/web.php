@@ -10,6 +10,7 @@ use App\Http\Controllers\fitur\ProgramController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +82,6 @@ Route::controller(ProgramController::class)->group(function(){
 });
 
 Route::get('/about', [FiturAboutController::class, 'index'])->name('about');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
