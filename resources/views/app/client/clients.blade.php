@@ -17,48 +17,17 @@
 <div class="clothes_main section ">
   <div class="container">
     <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-        <div class="sport_product">
-          <figure><img src="images/basketball.png" alt="img"/></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4>basket ball</h4>
+      
+      @foreach ($product as $row) 
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="sport_product">
+            <figure><img src="uploads/products/{{ $row->img }}" alt="img"/></figure>
+            <h3> $<strong class="price_text">{{ $row->price }}</strong></h3>
+            <h4>{{ $row->product_name }}</h4>
+          </div>
         </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-        <div class="sport_product">
-          <figure><img src="images/t-shirt.png" alt="img"/ ></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4> T-Shirt</h4>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-        <div class="sport_product">
-          <figure><img src="images/game.png" alt="img"/></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4>Game</h4>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-        <div class="sport_product">
-          <figure><img src="images/basketball.png" alt="img"/"></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4>basket ball</h4>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-        <div class="sport_product">
-          <figure><img src="images/t-shirt.png" alt="img"/"></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4>T-Shirt</h4>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-        <div class="sport_product">
-          <figure><img src="images/game.png" alt="img"/"></figure>
-          <h3> $<strong class="price_text">50</strong></h3>
-          <h4>Game</h4>
-        </div>
-      </div>
+      @endforeach
+
     </div>
   </div>
 </div>

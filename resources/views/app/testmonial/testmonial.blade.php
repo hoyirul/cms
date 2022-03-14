@@ -27,36 +27,20 @@
           </ul>
           <!-- The slideshow -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="titlepage">
-                <div class="john">
-                  <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
-                  <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
-                  <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                  <div class="icon_image"><img src="images/icon-1.png"></div>
+
+            @foreach ($testmonial as $row)
+              <div class="carousel-item {{ ($row->id == 1) ? 'active' : '' }}">
+                <div class="titlepage">
+                  <div class="john">
+                    <div class="john_image"><img src="uploads/testmonials/{{ $row->img_profile }}" style="max-width: 100%;"></div>
+                    <div class="john_text">{{ $row->name }}<span style="color: #fffcf4;">({{ $row->position }})</span></div>
+                    <p class="lorem_ipsum_text">{{ $row->testmonial }}</p>
+                    <div class="icon_image"><img src="images/icon-1.png"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="titlepage">
-                <div class="john">
-                  <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
-                  <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
-                  <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                  <div class="icon_image"><img src="images/icon-1.png"></div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="titlepage">
-                <div class="john">
-                  <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
-                  <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
-                  <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                  <div class="icon_image"><img src="images/icon-1.png"></div>
-                </div>
-              </div>
-            </div>
+            @endforeach
+            
           </div>
           <!-- Left and right controls -->
           <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
