@@ -21,6 +21,8 @@
                     <li><a href="/testmonial">Testmonial</a></li>
                     <li><a href="/client">Shop</a></li>
                     <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    {{-- <li><a href="/register">Register</a></li> --}}
                     <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon"/></a></li>
                   </ul>
                 </nav>
