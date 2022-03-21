@@ -89,14 +89,15 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/about', [FiturAboutController::class, 'index'])->name('about');
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', [SocksHomeController::class, 'index']);
+// Route::get('/', [SocksHomeController::class, 'index']);
 
-Route::prefix('/')->group(function(){
-    Route::get('/home', [SocksHomeController::class, 'index']);
-    Route::get('/about', [SocksAboutController::class, 'index']);
-    Route::get('/contact', [ContactController::class, 'index']);
-    Route::get('/client', [ClientController::class, 'index']);
-    Route::get('/testmonial', [TestmonialController::class, 'index']);
-});
+// Route::prefix('/')->group(function(){
+//     Route::get('/home', [SocksHomeController::class, 'index']);
+//     Route::get('/about', [SocksAboutController::class, 'index']);
+//     Route::get('/contact', [ContactController::class, 'index']);
+//     Route::get('/client', [ClientController::class, 'index']);
+//     Route::get('/testmonial', [TestmonialController::class, 'index']);
+// });
