@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class ArticleController extends Controller
 {
@@ -110,5 +111,12 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function cetak_pdf(){
+        // dd('tetsing');
+        $articles = Article::all();
+        $pdf = PDF::loadview('js10.articles_pdf', compact('articles'));
+        return $pdf->stream();
     }
 }

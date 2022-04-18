@@ -7,6 +7,9 @@
       <p>{{ $message }}</p>
     </div>
     @endif
+
+    <a href="{{ route('cetak_pdf') }}" target="_blank" class="btn btn-success mb-3">Cetak PDF</a>
+
     <table class="table table-bordered">
       <tr>
         <th>Judul</th>

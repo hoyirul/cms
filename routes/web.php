@@ -103,3 +103,4 @@ Route::prefix('/')->group(function(){
 });
 
 Route::resource('articles', Js10ArticleController::class);
+Route::get('/article/cetak_pdf', [Js10ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
