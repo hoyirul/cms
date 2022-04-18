@@ -15,7 +15,7 @@
       </tr>
       @foreach ($articles as $article)
       <tr>
-        <td>{{ $article->title }}</td>
+        <td><a href="{{ route('articles.edit', ['article' => $article->id]) }}">{{ $article->title }}</a></td>
         <td>{{ $article->content }}</td>
         <td><img style="width: 20%" src="{{asset('storage/'.$article->featured_image)}}"></td>
       </tr>
