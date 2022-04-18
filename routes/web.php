@@ -8,6 +8,7 @@ use App\Http\Controllers\fitur\NewsController;
 use App\Http\Controllers\fitur\ProductController;
 use App\Http\Controllers\fitur\ProgramController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\js10\ArticleController as Js10ArticleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\socks\AboutController as SocksAboutController;
 use App\Http\Controllers\socks\ClientController;
@@ -100,3 +101,5 @@ Route::prefix('/')->group(function(){
     Route::get('/client', [ClientController::class, 'index']);
     Route::get('/testmonial', [TestmonialController::class, 'index']);
 });
+
+Route::resource('articles', Js10ArticleController::class);
